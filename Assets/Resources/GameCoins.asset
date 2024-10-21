@@ -131,7 +131,7 @@ MonoBehaviour:
       nature, attracting those who enjoy the lighter side of the crypto space while
       riding the wave of meme coin popularity."
     solanaContract: ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY
-    audioDescription: {fileID: 8300000, guid: 9147867239c9889428188627f849f730, type: 3}
+    audioDescription: {fileID: 8300000, guid: 00ba39a7e7c20874090b84bad099254a, type: 3}
     pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
     icon: {fileID: 21300000, guid: 788638e596963cc4e8c08044d86f37c1, type: 3}
     menuIcon: {fileID: 21300000, guid: 2c809fea5c110fc489eb9af5cdfd9427, type: 3}
@@ -141,3 +141,25 @@ MonoBehaviour:
     offset: {x: 0, y: 0, z: 0}
     menuColor1: {r: 0, g: 0.1137255, b: 0.20392159, a: 1}
     menuColor2: {r: 0.03137255, g: 0.32941177, b: 0.50980395, a: 1}
+  - name: Ponke
+    notSpawn: 1
+    token: PONKE
+    description: "Ponke is a meme-based cryptocurrency that taps into the playful
+      side of the crypto world, attracting a community of enthusiasts who enjoy speculative
+      investments and humorous branding. Like other meme coins, Ponke relies on social
+      media trends and community engagement to drive its popularity. Its lighthearted
+      approach and meme-inspired design make it stand out in the crowded meme coin
+      market. Although it doesn\u2019t focus on technological innovation, Ponke offers
+      its supporters a fun and engaging way to participate in the growing meme coin
+      culture."
+    solanaContract: 5z3EqYQo9HiCEs3R84RCDMu2n7anpDMxRhdK8PSWmrRC
+    audioDescription: {fileID: 8300000, guid: 067f02aa9e1fdf34da291db79108eb5f, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: b5e2b907b9804e44c9bb69bbd6255054, type: 3}
+    menuIcon: {fileID: 21300000, guid: 22ca56d7ac6637b4986737ab134a94ed, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 6473580154145489532, guid: 4e5d89f2368f8bc44beab5adc71025e3, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 1, g: 0.89650905, b: 0, a: 1}
+    menuColor2: {r: 1, g: 0.61947197, b: 0, a: 1}

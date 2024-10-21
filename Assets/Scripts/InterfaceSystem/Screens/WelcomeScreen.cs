@@ -13,10 +13,11 @@ public class WelcomeScreen : MonoBehaviour
     public Transform logo;
     public TMP_Text termsText;
 
-    IEnumerator InitialSequence()
+   public IEnumerator InitialSequence()
     {
+        logo.gameObject.SetActive(false);
         yield return new WaitForSeconds(1);
-        spinningLoadingIndicator.gameObject.SetActive(true);
+        //spinningLoadingIndicator.gameObject.SetActive(true);
         //SceneManager.LoadSceneAsync("GameScene");
         if (DataSystem.gameData.isBetaAuthScreenPassed)
         {
@@ -25,8 +26,8 @@ public class WelcomeScreen : MonoBehaviour
         else
         {
             yield return new WaitForSeconds(2.5f);
-            spinningLoadingIndicator.gameObject.SetActive(false);
-            logo.gameObject.SetActive(false);
+            //spinningLoadingIndicator.gameObject.SetActive(false);
+            
             var termsFader = initialTerms.GetComponent<CanvasGroup>();
             termsFader.DOFade(1f, 0.5f).OnComplete(() =>
             {
@@ -54,7 +55,7 @@ public class WelcomeScreen : MonoBehaviour
     private void Start()
     {
         HandleTermsDate();
-        StartCoroutine(InitialSequence());
+        //StartCoroutine(InitialSequence());
     }
 
     private void Update()

@@ -21,17 +21,20 @@ public class HealthManager : MonoBehaviour
     {
         DontDestroyOnLoad(gameObject);
         instance = this;
-
-        Initialize();
-    }
-
-    void Initialize()
-    {
-        camera = ARCamera.arCamera.transform;
     }
 
     void HandleCalculateSteps()
     {
+
+        if(camera == null)
+        {
+            if(ARCamera.arCamera != null)
+            {
+                camera = ARCamera.arCamera.transform;
+            }
+            return;
+        }
+
         Vector3 previousPositionXZ = new Vector3(previousCameraPosition.x, 0, previousCameraPosition.z);
         Vector3 currentPositionXZ = new Vector3(camera.position.x, 0, camera.position.z);
 
