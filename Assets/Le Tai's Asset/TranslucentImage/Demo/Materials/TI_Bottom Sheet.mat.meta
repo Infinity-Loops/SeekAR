@@ -1,0 +1,15 @@
+fileFormatVersion: 2
+guid: f7b51a5edc758c549b4ddca22e6fb75a
+timeCreated: 1540802700
+licenseType: Store
+NativeFormatImporter:
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 78464
+  packageName: Translucent Image - Fast UI Background Blur
+  packageVersion: 4.4.2
+  assetPath: Assets/Le Tai's Asset/TranslucentImage/Demo/Materials/TI_Bottom Sheet.mat
+  uploadId: 683892

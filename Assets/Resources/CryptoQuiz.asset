@@ -1,0 +1,207 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: ada97ce92071dc14b9a529884657987e, type: 3}
+  m_Name: CryptoQuiz
+  m_EditorClassIdentifier: 
+  quiz:
+  - coinName: Bitcoin
+    coinIcon: {fileID: 21300000, guid: 594b372ac0e1ff847b94517a454d8b3a, type: 3}
+    pages:
+    - question: Who created Bitcoin?
+      alternatives:
+      - A) Vitalik Buterin
+      - B) Satoshi Nakamoto
+      - C) Charles Hoskinson
+      - D) Elon Musk
+      correctAlternative: 1
+    - question: What is the maximum number of Bitcoins that can be mined?
+      alternatives:
+      - A) 21 million
+      - B) 50 million
+      - C) 100 million
+      - D) 1 billion
+      correctAlternative: 0
+    - question: When was Bitcoin launched?
+      alternatives:
+      - A) 2005
+      - B) 2008
+      - C) 2009
+      - D) 2011
+      correctAlternative: 2
+    - question: What is the underlying technology of Bitcoin?
+      alternatives:
+      - A) Artificial Intelligence
+      - B) Cloud Computing
+      - C) Blockchain
+      - D) Internet of Things
+      correctAlternative: 2
+    - question: What is the name of the first mined Bitcoin block?
+      alternatives:
+      - A) Alpha Block
+      - B) Base Block
+      - C) Genesis Block
+      - D) Prime Block
+      correctAlternative: 2
+  - coinName: Avax
+    coinIcon: {fileID: 21300000, guid: 640940eceef81944d8cecb3fcfe0814e, type: 3}
+    pages:
+    - question: Who is the founder of Avalanche (AVAX)?
+      alternatives:
+      - "A) Emin G\xFCn Sirer"
+      - B) Gavin Wood
+      - C) Charles Hoskinson
+      - D) Vitalik Buterin
+      correctAlternative: 0
+    - question: What consensus mechanism does Avalanche use?
+      alternatives:
+      - A) Proof of Work
+      - B) Proof of Stake
+      - C) Delegated Proof of Stake
+      - D) Byzantine Fault Tolerance
+      correctAlternative: 1
+    - question: In what year was Avalanche (AVAX) launched?
+      alternatives:
+      - A) 2017
+      - B) 2018
+      - C) 2019
+      - D) 2020
+      correctAlternative: 3
+    - question: What is Avalanche's native token called?
+      alternatives:
+      - A) AVAX
+      - B) AVAL
+      - C) AVT
+      - D) AVTAX
+      correctAlternative: 0
+    - question: What is the main feature of Avalanche's blockchain?
+      alternatives:
+      - A) Fast transaction finality
+      - B) High mining rewards
+      - C) Low gas fees only
+      - D) Single-layer network
+      correctAlternative: 0
+  - coinName: Binance
+    coinIcon: {fileID: 21300000, guid: 6718b80f7975b5b4ea26d73604aa1062, type: 3}
+    pages:
+    - question: Who is the founder of Binance?
+      alternatives:
+      - A) Changpeng Zhao
+      - B) Brian Armstrong
+      - C) Vitalik Buterin
+      - D) Justin Sun
+      correctAlternative: 0
+    - question: "What is Binance\u2019s native token?"
+      alternatives:
+      - A) BNB
+      - B) BUSD
+      - C) BTC
+      - D) BNT
+      correctAlternative: 0
+    - question: In what year was Binance launched?
+      alternatives:
+      - A) 2015
+      - B) 2016
+      - C) 2017
+      - D) 2018
+      correctAlternative: 2
+    - question: Which network does Binance Smart Chain (BSC) use?
+      alternatives:
+      - A) Ethereum
+      - B) Bitcoin
+      - C) Delegated Proof of Stake
+      - D) Proof of Staked Authority
+      correctAlternative: 3
+    - question: What is the main purpose of Binance?
+      alternatives:
+      - A) Cloud storage
+      - B) Cryptocurrency exchange
+      - C) NFT marketplace
+      - D) DeFi staking
+      correctAlternative: 1
+  - coinName: Dexicash
+    coinIcon: {fileID: 21300000, guid: 1f77ba3db1d01bc4da882354c671387a, type: 3}
+    pages:
+    - question: What role does DexiCash play within the Dexioprotocol ecosystem
+      alternatives:
+      - A) Governance token
+      - B) Primary in-game currency
+      - C) Staking reward token
+      - D) Cross-chain utility token
+      correctAlternative: 1
+    - question: Which blockchain supports DexiCash transactions?
+      alternatives:
+      - A) Ethereum
+      - B) Binance Smart Chain
+      - C) Avalanche
+      - D) Solana
+      correctAlternative: 1
+    - question: What is the primary use case for DexiCash in DexiKnights?
+      alternatives:
+      - A) Yield farming
+      - B) Purchasing NFTs
+      - C) Powering player transactions and rewards
+      - D) Governance voting
+      correctAlternative: 3
+    - question: How does DexiCash integrate with the DexiWallet?
+      alternatives:
+      - A) For staking and liquidity pools
+      - B) To hold, transfer, and manage in-game assets
+      - C) To convert into stablecoins
+      - D) For cross-chain bridging
+      correctAlternative: 1
+    - question: What mechanism ensures DexiCash scarcity over time?
+      alternatives:
+      - A) Transaction tax
+      - B) Token burns
+      - C) Maximum supply cap
+      - D) Deflationary mining rewards
+      correctAlternative: 1
+  - coinName: Ethereum
+    coinIcon: {fileID: 21300000, guid: 8944c0049b08d9f4f9ef23b29ea45b40, type: 3}
+    pages:
+    - question: "What is Ethereum\u2019s primary consensus mechanism after the \"Merge\"
+        update?"
+      alternatives:
+      - A) Proof of Work
+      - B) Proof of Stake
+      - C) Delegated Proof of Stake
+      - D) Proof of Authority
+      correctAlternative: 1
+    - question: Which programming language is primarily used to write Ethereum smart
+        contracts?
+      alternatives:
+      - A) Vyper
+      - B) Solidity
+      - C) Rust
+      - D) C++
+      correctAlternative: 1
+    - question: What feature differentiates Ethereum from Bitcoin?
+      alternatives:
+      - A) Decentralized ledger
+      - B) Smart contract functionality
+      - C) Limited supply
+      - D) Proof of Work consensus
+      correctAlternative: 1
+    - question: What is Ethereum's Layer 2 solution primarily used for scaling?
+      alternatives:
+      - A) Polkadot
+      - B) Arbitrum
+      - C) Polygon
+      - D) Solana
+      correctAlternative: 2
+    - question: What is Ethereum's "Beacon Chain" designed to do?
+      alternatives:
+      - A) Enable shard chains
+      - B) Facilitate staking rewards
+      - C) Implement DeFi protocols
+      - D) Store NFTs
+      correctAlternative: 0

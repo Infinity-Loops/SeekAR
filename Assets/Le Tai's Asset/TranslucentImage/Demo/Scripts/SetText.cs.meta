@@ -1,0 +1,19 @@
+fileFormatVersion: 2
+guid: d2b0369b1e90a8c41a1dbf3a4f3be2d1
+timeCreated: 1477628633
+licenseType: Store
+MonoImporter:
+  serializedVersion: 2
+  defaultReferences: []
+  executionOrder: 0
+  icon: {instanceID: 0}
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 78464
+  packageName: Translucent Image - Fast UI Background Blur
+  packageVersion: 4.4.2
+  assetPath: Assets/Le Tai's Asset/TranslucentImage/Demo/Scripts/SetText.cs
+  uploadId: 683892

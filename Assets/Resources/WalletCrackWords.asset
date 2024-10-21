@@ -1,0 +1,155 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 22074848ed522bf43a492f632f1b2207, type: 3}
+  m_Name: WalletCrackWords
+  m_EditorClassIdentifier: 
+  sessions:
+  - hint: You might find these in nature...
+    words:
+    - Tree
+    - River
+    - Mountain
+    - Forest
+    - Whale
+    - Ocean
+    - Cloud
+    - Desert
+    - Island
+    - Falcon
+    - Canyon
+    - Sun
+  - hint: These are tools or objects you might use every day...
+    words:
+    - Spoon
+    - Knife
+    - Fork
+    - Glass
+    - Plate
+    - Pen
+    - Chair
+    - Table
+    - Lamp
+    - Key
+    - Phone
+    - Book
+  - hint: Animals you could encounter...
+    words:
+    - Dog
+    - Cat
+    - Horse
+    - Cow
+    - Sheep
+    - Rabbit
+    - Bird
+    - Fish
+    - Fox
+    - Snake
+    - Wolf
+    - Lion
+  - hint: Things you might see in a city...
+    words:
+    - Building
+    - Car
+    - Bridge
+    - Street
+    - Bus
+    - Taxi
+    - Subway
+    - Park
+    - Hotel
+    - Restaurant
+    - Shop
+    - Sign
+  - hint: You might travel using these...
+    words:
+    - Car
+    - Bus
+    - Bicycle
+    - Train
+    - Boat
+    - Ship
+    - Subway
+    - Plane
+    - Scooter
+    - Taxi
+    - Truck
+    - Motorcycle
+  - hint: Common elements in the natural world...
+    words:
+    - Water
+    - Fire
+    - Wind
+    - Earth
+    - Sky
+    - Rain
+    - Storm
+    - Cloud
+    - Snow
+    - Ice
+    - Fog
+    - Lightning
+  - hint: These are used in technology...
+    words:
+    - Chip
+    - Code
+    - Screen
+    - Keyboard
+    - Mouse
+    - Server
+    - Network
+    - Signal
+    - Device
+    - Drive
+    - Program
+    - Data
+  - hint: Terms related to finance...
+    words:
+    - Money
+    - Credit
+    - Debt
+    - Account
+    - Bank
+    - Loan
+    - Tax
+    - Interest
+    - Investment
+    - Payment
+    - Savings
+    - Transaction
+  - hint: These are all emotions...
+    words:
+    - Happiness
+    - Sadness
+    - Anger
+    - Fear
+    - Joy
+    - Love
+    - Surprise
+    - Disgust
+    - Shame
+    - Pride
+    - Gratitude
+    - Confusion
+  - hint: They are all types of fruit...
+    words:
+    - Apple
+    - Banana
+    - Cherry
+    - Grape
+    - Lemon
+    - Mango
+    - Orange
+    - Peach
+    - Pear
+    - Pineapple
+    - Plum
+    - Watermelon

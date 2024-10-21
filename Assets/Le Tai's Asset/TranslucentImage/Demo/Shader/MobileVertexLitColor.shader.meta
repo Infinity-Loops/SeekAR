@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: 213afb64440d6fb42a216ed80e03c8b7
+timeCreated: 1484120671
+licenseType: Store
+ShaderImporter:
+  defaultTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 78464
+  packageName: Translucent Image - Fast UI Background Blur
+  packageVersion: 4.4.2
+  assetPath: Assets/Le Tai's Asset/TranslucentImage/Demo/Shader/MobileVertexLitColor.shader
+  uploadId: 683892

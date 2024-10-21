@@ -1,0 +1,13 @@
+fileFormatVersion: 2
+guid: e4be3e863386f71479c37e8126d3453b
+ShaderImporter:
+  externalObjects: {}
+  defaultTextures:
+  - _T_Sky_Stars: {fileID: 2800000, guid: 4d6c539ace17bd848b961043e568dd5b, type: 3}
+  - _T_Sky_Blue: {fileID: 2800000, guid: c3a0497101c61044295e7036268d6d00, type: 3}
+  - _T_Sky_Clouds_M: {fileID: 2800000, guid: a005cd5ddd39d08479649c40912cf186, type: 3}
+  - _T_Sky_Clouds_M1: {fileID: 2800000, guid: a005cd5ddd39d08479649c40912cf186, type: 3}
+  nonModifiableTextures: []
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 

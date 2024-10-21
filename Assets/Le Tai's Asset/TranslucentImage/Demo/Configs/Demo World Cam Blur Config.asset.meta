@@ -1,0 +1,16 @@
+fileFormatVersion: 2
+guid: d33304e2df0e5fe45a88c8b1db6ebd72
+NativeFormatImporter:
+  externalObjects: {}
+  mainObjectFileID: 11400000
+  userData: 
+  assetBundleName: 
+  assetBundleVariant: 
+AssetOrigin:
+  serializedVersion: 1
+  productId: 78464
+  packageName: Translucent Image - Fast UI Background Blur
+  packageVersion: 4.4.2
+  assetPath: Assets/Le Tai's Asset/TranslucentImage/Demo/Configs/Demo World Cam Blur
+    Config.asset
+  uploadId: 683892

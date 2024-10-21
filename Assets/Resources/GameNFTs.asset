@@ -1,0 +1,35 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 777638f03746dd049af27b5ef83fd697, type: 3}
+  m_Name: GameNFTs
+  m_EditorClassIdentifier: 
+  NftList:
+  - name: Black Chinese Dragon
+    icon: {fileID: 21300000, guid: 41bb8379ffdf9ba4685253880edfb848, type: 3}
+    collectablePrefab: {fileID: 327526030079218830, guid: 7e8c88acf3bc3064c9d27aae45d42d85, type: 3}
+    value: 0.01
+    currency: ETH
+  - name: Golden Sky Dragon
+    icon: {fileID: 21300000, guid: f54e5f69f16492342bf9e492995d85e5, type: 3}
+    collectablePrefab: {fileID: 327526030079218830, guid: 6c62a4b7e14a34c43b503b640979c74e, type: 3}
+    value: 0.01
+    currency: ETH
+  - name: Magic Cube
+    icon: {fileID: 21300000, guid: e27e1105c63d898459241d4a1e013746, type: 3}
+    collectablePrefab: {fileID: 327526030079218830, guid: 8cf5b3d43ba38eb478ddf22b24aad417, type: 3}
+    value: 0.01
+    currency: ETH
+  - name: Mystic Whale
+    icon: {fileID: 21300000, guid: d5142020c7ea6ca4ab53d44249b7fc88, type: 3}
+    collectablePrefab: {fileID: 327526030079218830, guid: 61f6eb2c288d06b43883da0cbd17b889, type: 3}
+    value: 0.01
+    currency: ETH

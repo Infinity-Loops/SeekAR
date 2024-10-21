@@ -1,0 +1,143 @@
+%YAML 1.1
+%TAG !u! tag:unity3d.com,2011:
+--- !u!114 &11400000
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: dc41b7ca529c83e428376c66bde9af06, type: 3}
+  m_Name: GameCoins
+  m_EditorClassIdentifier: 
+  coins:
+  - name: Solana
+    notSpawn: 0
+    token: SOL
+    description: Solana (SOL) is a high-performance blockchain known for its fast
+      transaction speeds and low fees. Designed to scale for widespread use, Solana
+      can process thousands of transactions per second, making it popular for decentralized
+      applications, DeFi projects, and NFTs. Its unique proof-of-history (PoH) consensus
+      mechanism sets it apart from other blockchains, providing both speed and security.
+      SOL, the native token, is used for transaction fees and staking, supporting
+      the network's overall functionality.
+    solanaContract: So11111111111111111111111111111111111111112
+    audioDescription: {fileID: 8300000, guid: 055a6392c7a131240a63001b287c6bdb, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: 46f1c4b5c3b3d5241b01a059f749c38d, type: 3}
+    menuIcon: {fileID: 21300000, guid: 30083717fd7150c4eba450fe4e41da31, type: 3}
+    value: 0.1
+    conversionValue: 7e-10
+    model: {fileID: 919132149155446097, guid: 2849815eede8143469a5abaf9c55a184, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 0.19607843, g: 0.03137255, b: 0.35686275, a: 0}
+    menuColor2: {r: 0, g: 0.10980392, b: 0.24705882, a: 0}
+  - name: DogWifHat
+    notSpawn: 1
+    token: WIF
+    description: DogWifHat is a meme coin that emerged as a playful addition to the
+      growing trend of dog-themed cryptocurrencies. Its quirky name and branding,
+      featuring a dog wearing a hat, have helped it gain attention in the meme coin
+      space. Like other meme coins, DogWifHat relies heavily on community engagement
+      and social media buzz to drive interest. While it doesn't offer groundbreaking
+      technology, its appeal lies in its lighthearted nature and the speculative
+      trading opportunities it creates for enthusiasts.
+    solanaContract: EKpQGSJtjMFqKZ9KQanSqYXRcF8fBopzLHYxdM65zcjm
+    audioDescription: {fileID: 8300000, guid: 7427283b86382b64e91a778acce672c0, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: 7201410c3f73f0846b9082c4fac1355e, type: 3}
+    menuIcon: {fileID: 21300000, guid: 04f74ab13379d594986b35f507d90077, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 919132149155446097, guid: 30f5bb721f24c2b47819e942f861d38a, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 0.93725497, g: 0.75294125, b: 0.654902, a: 0}
+    menuColor2: {r: 1, g: 1, b: 1, a: 0}
+  - name: Popcat
+    notSpawn: 1
+    token: POPCAT
+    description: "Popcat is a meme-inspired cryptocurrency that gained attention
+      due to the viral \"Popcat\" internet meme, where a cat\u2019s mouth opens and
+      closes with each click. Similar to other meme coins, Popcat relies on community
+      engagement and social media trends for its popularity. It has attracted a fan
+      base interested in the fun, lighthearted nature of the project, rather than
+      technological innovation. As with many meme coins, its value is highly speculative,
+      driven by the enthusiasm and support of its community."
+    solanaContract: 7GCihgDB8fe6KNjn2MYtkzZcRjQy3t9GHdC8uHYmW2hr
+    audioDescription: {fileID: 8300000, guid: 2c4a89f644c6be54c9d570952d5ca5c1, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: e38f2ccea5331a04cbc5384f662ef69a, type: 3}
+    menuIcon: {fileID: 21300000, guid: cffd2fde2672f5e4a9ef0ba5340655ce, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 919132149155446097, guid: 80b7352ae75911e4fafec0a8aa16b858, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 1, g: 0.75686276, b: 0.654902, a: 0}
+    menuColor2: {r: 0.58431375, g: 0.2627451, b: 0.0627451, a: 0}
+  - name: Bonk
+    notSpawn: 1
+    token: BONK
+    description: Bonk (BONK) is a meme coin launched on the Solana blockchain, aiming
+      to be the "Solana Dog Coin." It was created as a fun, community-driven token
+      to rival other popular meme coins like Dogecoin and Shiba Inu. Bonk stands
+      out by actively rewarding its community with airdrops and promoting engagement
+      within the Solana ecosystem. Despite its lighthearted approach, Bonk has gained
+      attention due to its rapid growth and strong support from the Solana community,
+      positioning itself as a playful but significant player in the meme coin space.
+    solanaContract: DezXAZ8z7PnrnRJjz3wXBoRgixCa6xjnB7YaB1pPB263
+    audioDescription: {fileID: 8300000, guid: 9266321ec6d5c3a46897d2a68ca064ae, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: 7653e794f94b1a94eac93799c774a890, type: 3}
+    menuIcon: {fileID: 21300000, guid: cab0f2b95522d5d41a727ffc8ce56d9c, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 919132149155446097, guid: bc4cb5723b39c8d45a9c95a8c19255bb, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 1, g: 0.5647059, b: 0, a: 0}
+    menuColor2: {r: 1, g: 0.21960784, b: 0, a: 0}
+  - name: cat in a dogs world
+    notSpawn: 1
+    token: MEW
+    description: Cat in a Dog's World is a playful meme-based cryptocurrency that
+      embraces its quirky name to stand out in the crowded meme coin space. Its concept
+      revolves around being the "cat" among the many dog-themed cryptocurrencies,
+      offering a humorous twist on the trend. With a focus on community engagement
+      and social media buzz, Cat in a Dog's World has gained attention for its lighthearted
+      branding and speculative nature. Like other meme coins, its value is driven
+      by the enthusiasm of its supporters, making it a fun and engaging token for
+      those who enjoy the meme coin culture.
+    solanaContract: MEW1gQWJ3nEXg2qgERiKu7FAFj79PHvQVREQUzScPP5
+    audioDescription: {fileID: 8300000, guid: 9147867239c9889428188627f849f730, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: 3fa63ae429908114a87acb9d7e6f95b6, type: 3}
+    menuIcon: {fileID: 21300000, guid: b7d64f0897e256344913c2e8ddf31846, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 6473580154145489532, guid: f53a225cf40ed134aab598dc1436da05, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 1, g: 0.020645875, b: 0, a: 0}
+    menuColor2: {r: 1, g: 0.42685178, b: 0.41037738, a: 0}
+  - name: Moo Deng
+    notSpawn: 1
+    token: MOODENG
+    description: "Moo Deng is a meme-inspired cryptocurrency that combines humor
+      and community-driven excitement. With a playful nod to both cow and meme culture,
+      Moo Deng aims to create a lighthearted environment for crypto enthusiasts.
+      Like many other meme coins, it thrives on social media trends and community
+      engagement to drive interest and adoption. Though not offering groundbreaking
+      technology, Moo Deng\u2019s charm lies in its fun branding and speculative
+      nature, attracting those who enjoy the lighter side of the crypto space while
+      riding the wave of meme coin popularity."
+    solanaContract: ED5nyyWEzpPPiWimP8vYm7sD7TD3LAt3Q3gRTWHzPJBY
+    audioDescription: {fileID: 8300000, guid: 9147867239c9889428188627f849f730, type: 3}
+    pickupEffect: {fileID: 177804, guid: 658fc6655c1c78e45a80243a241f1b1e, type: 3}
+    icon: {fileID: 21300000, guid: 788638e596963cc4e8c08044d86f37c1, type: 3}
+    menuIcon: {fileID: 21300000, guid: 2c809fea5c110fc489eb9af5cdfd9427, type: 3}
+    value: 0.1
+    conversionValue: 1.1e-11
+    model: {fileID: 6473580154145489532, guid: fc0dbfbdf8bc90a4ea0d672e8410ffba, type: 3}
+    offset: {x: 0, y: 0, z: 0}
+    menuColor1: {r: 0, g: 0.1137255, b: 0.20392159, a: 1}
+    menuColor2: {r: 0.03137255, g: 0.32941177, b: 0.50980395, a: 1}
