@@ -97,7 +97,7 @@ MonoBehaviour:
     offset: {x: 0, y: 0, z: 0}
     menuColor1: {r: 1, g: 0.5647059, b: 0, a: 0}
     menuColor2: {r: 1, g: 0.21960784, b: 0, a: 0}
-  - name: cat in a dogs world
+  - name: Cat In A Dogs World
     notSpawn: 1
     token: MEW
     description: Cat in a Dog's World is a playful meme-based cryptocurrency that
