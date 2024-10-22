@@ -59,6 +59,11 @@ public class CoinInfoPanel : MonoBehaviour
 
     }
 
+    public void CopyContract()
+    {
+        GUIUtility.systemCopyBuffer = solanaContract.text;
+    }
+
     public void Close()
     {
         transform.DOScale(Vector3.zero, 0.25f).OnComplete(() =>

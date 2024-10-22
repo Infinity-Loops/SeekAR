@@ -131,7 +131,7 @@ MonoBehaviour:
   dropAnimation: CoinDrop
   coinCustomAnimBone: {fileID: 2423239240507694370}
   coinCustomAnimBoneScale: 1
-  timeToDrop: 7
+  timeToDrop: 10
   coinToDrop: {fileID: 6781233866214900434, guid: e711e9e1c2f870848a0f01a2b1f65e9c, type: 3}
   endSequenceEffect: {fileID: 153256, guid: fe394d041df1a0547990f49cf653249f, type: 3}
 --- !u!1001 &2974914897886781693
@@ -143,8 +143,20 @@ PrefabInstance:
     m_TransformParent: {fileID: 7683039489060352334}
     m_Modifications:
     - target: {fileID: -8581584804503306785, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.x
+      value: 0.0042740996
+      objectReference: {fileID: 0}
+    - target: {fileID: -8581584804503306785, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 23.096998
+      value: 23.047712
+      objectReference: {fileID: 0}
+    - target: {fileID: -8581584804503306785, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
+      propertyPath: m_LocalEulerAnglesHint.z
+      value: -0.0015449325
+      objectReference: {fileID: 0}
+    - target: {fileID: -8581584804503306785, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
+      propertyPath: m_ConstrainProportionsScale
+      value: 1
       objectReference: {fileID: 0}
     - target: {fileID: -7149160539063686888, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
@@ -160,15 +172,15 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -6722599348678535729, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
-      value: 2.0578454
+      value: 2.1394873
       objectReference: {fileID: 0}
     - target: {fileID: -6722599348678535729, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.y
-      value: 1.2144747
+      value: 1.3247437
       objectReference: {fileID: 0}
     - target: {fileID: -6722599348678535729, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.z
-      value: 1.3885
+      value: 1.2243537
       objectReference: {fileID: 0}
     - target: {fileID: -5758307827079147509, guid: 6359f55455a8bdc46ba7f75545ebd2e3, type: 3}
       propertyPath: m_LocalEulerAnglesHint.x
