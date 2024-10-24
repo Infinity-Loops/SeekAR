@@ -10943,6 +10943,7 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   introScreen: {fileID: 4052268874201618804}
+  screen: {fileID: 0}
 --- !u!1 &4052268874201618800
 GameObject:
   m_ObjectHideFlags: 0

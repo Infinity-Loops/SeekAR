@@ -334,7 +334,7 @@ MonoBehaviour:
   mapRoot: {fileID: 8829466647063600999}
   coinName: {fileID: 5441081433480296910}
   dontChooseCoin: 1
-  coinToChoose: cat in a dogs world
+  coinToChoose: Cat In A Dogs World
 --- !u!1 &8806129972150182953
 GameObject:
   m_ObjectHideFlags: 0

@@ -42,7 +42,7 @@ public class ClientManager : MonoBehaviour
 
     void HandleSetupOptimizationSettings()
     {
-        Application.targetFrameRate = 30;
+        Application.targetFrameRate = 60;
         Physics.autoSyncTransforms = false;
     }
 

@@ -8,6 +8,7 @@ using UnityEngine.Android;
 public class MapAvatar : MonoBehaviour
 {
     public static MapAvatar Instance;
+    public Joystick joystick;
     public Transform avatarRoot;
     public Transform mapCamera;
     public LightshipMapView map;
@@ -103,6 +104,7 @@ public class MapAvatar : MonoBehaviour
             while (isActiveAndEnabled)
             {
                 HandleUpdateEditorInput();
+                HandleUpdateJoystickInput();
                 yield return null;
             }
         }
@@ -123,6 +125,8 @@ public class MapAvatar : MonoBehaviour
 #endif
             while (isActiveAndEnabled)
             {
+                HandleUpdateJoystickInput();
+
                 var gpsInfo = Input.location.lastData;
                 if (gpsInfo.timestamp > lastGpsUpdateTime)
                 {
@@ -151,6 +155,20 @@ public class MapAvatar : MonoBehaviour
     {
         float vertical = Input.GetAxis("Vertical");
         float horizontal = Input.GetAxis("Horizontal");
+
+        // Make Editor movement relative to the camera's forward direction
+        var cameraForward = Vector3.Scale(mapCamera.transform.forward, new Vector3(1, 0, 1));
+        var cameraRight = mapCamera.transform.right;
+        Vector3 targetMove = cameraForward * vertical + cameraRight * horizontal;
+
+
+        targetLocation += targetMove * (60 * Time.deltaTime);
+    }
+
+    private void HandleUpdateJoystickInput()
+    {
+        float vertical = joystick.Vertical;
+        float horizontal = joystick.Horizontal;
 
         // Make Editor movement relative to the camera's forward direction
         var cameraForward = Vector3.Scale(mapCamera.transform.forward, new Vector3(1, 0, 1));

@@ -2,6 +2,7 @@ using System.Collections;
 using System.Collections.Generic;
 using Unity.VisualScripting;
 using UnityEngine;
+using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
@@ -45,6 +46,7 @@ public class MapCamera : MonoBehaviour
 
     void HandleTouchMove()
     {
+
         var activeTouches = Touch.activeTouches;
 
         if (activeTouches.Count == 1)
@@ -52,7 +54,10 @@ public class MapCamera : MonoBehaviour
             var touch = activeTouches[0];
             if (touch.phase == UnityEngine.InputSystem.TouchPhase.Moved)
             {
-                RotateCamera(touch.delta);
+                if (!EventSystem.current.IsPointerOverGameObject(touch.touchId))
+                {
+                    RotateCamera(touch.delta);
+                }
             }
         }
     }
