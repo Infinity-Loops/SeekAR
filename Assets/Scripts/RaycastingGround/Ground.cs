@@ -9,7 +9,8 @@ public class Ground : MonoBehaviour
     private ARRaycastManager raycaster;
     private Vector2 screenCenter;
     private List<ARRaycastHit> hits = new List<ARRaycastHit>();
-
+    private Vector3 medianPoint = Vector3.zero;
+    private int hitPoints;
     private void Awake()
     {
         raycaster = GetComponent<ARRaycastManager>();
@@ -24,15 +25,16 @@ public class Ground : MonoBehaviour
 
         if (raycaster.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon) && hits.Count > 0)
         {
-            Vector3 medianPoint = Vector3.zero;
 
             foreach (var hit in hits)
             {
                 medianPoint += hit.pose.position;
             }
 
-            medianPoint /= hits.Count;
-            ground.position = medianPoint;
+            hitPoints += hits.Count;
+
+            Vector3 midPont = medianPoint / hitPoints;
+            ground.position = midPont;
         }
     }
 }
