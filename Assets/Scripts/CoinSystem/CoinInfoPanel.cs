@@ -12,6 +12,7 @@ public class CoinInfoPanel : MonoBehaviour
     public TMP_Text description;
     public TMP_Text type;
     public TMP_Text solanaContract;
+    public CanvasGroup copiedPopup;
     public Image icon;
     private Transform caller;
     private Transform camera;
@@ -62,6 +63,10 @@ public class CoinInfoPanel : MonoBehaviour
     public void CopyContract()
     {
         GUIUtility.systemCopyBuffer = solanaContract.text;
+        copiedPopup.DOFade(1f, 0.25f).OnComplete(() =>
+        {
+            copiedPopup.DOFade(0f, 0.25f).SetDelay(1.5f);
+        });
     }
 
     public void Close()

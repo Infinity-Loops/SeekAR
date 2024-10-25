@@ -74,7 +74,7 @@ Material:
         m_Offset: {x: 0, y: 0}
     m_Ints: []
     m_Floats:
-    - BlurRadius: 0.1
+    - BlurRadius: 0.5
     - FadeTightness: 80
     - MultiplyStrength: 0.5
     - Vector1_50A95A7B: 0
@@ -85,7 +85,7 @@ Material:
     - _GlossMapScale: 1
     - _Glossiness: 0.5
     - _GlossyReflections: 1
-    - _Height: 0.01
+    - _Height: 0
     - _Metallic: 0
     - _Mode: 0
     - _OcclusionStrength: 1

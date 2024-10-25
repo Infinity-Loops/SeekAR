@@ -632,6 +632,7 @@ GameObject:
   - component: {fileID: 139292032}
   - component: {fileID: 139292034}
   - component: {fileID: 139292033}
+  - component: {fileID: 139292035}
   m_Layer: 0
   m_Name: GroundPlane
   m_TagString: Untagged
@@ -648,9 +649,9 @@ Transform:
   m_GameObject: {fileID: 139292031}
   serializedVersion: 2
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: 0, y: -1, z: 0}
-  m_LocalScale: {x: 2, y: 2, z: 2}
-  m_ConstrainProportionsScale: 1
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 15, y: 1, z: 15}
+  m_ConstrainProportionsScale: 0
   m_Children: []
   m_Father: {fileID: 176689190}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
@@ -707,6 +708,28 @@ MeshFilter:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 139292031}
   m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
+--- !u!64 &139292035
+MeshCollider:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 139292031}
+  m_Material: {fileID: 0}
+  m_IncludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_ExcludeLayers:
+    serializedVersion: 2
+    m_Bits: 0
+  m_LayerOverridePriority: 0
+  m_IsTrigger: 0
+  m_ProvidesContacts: 0
+  m_Enabled: 1
+  serializedVersion: 5
+  m_Convex: 0
+  m_CookingOptions: 30
+  m_Mesh: {fileID: 10209, guid: 0000000000000000e000000000000000, type: 0}
 --- !u!1 &176689189
 GameObject:
   m_ObjectHideFlags: 0
@@ -716,14 +739,13 @@ GameObject:
   serializedVersion: 6
   m_Component:
   - component: {fileID: 176689190}
-  - component: {fileID: 176689191}
   m_Layer: 0
   m_Name: Ground
   m_TagString: Untagged
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 0
+  m_IsActive: 1
 --- !u!4 &176689190
 Transform:
   m_ObjectHideFlags: 0
@@ -740,21 +762,6 @@ Transform:
   - {fileID: 139292032}
   m_Father: {fileID: 551561385}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
---- !u!114 &176689191
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 176689189}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 2816f2b67e2dfa04d9ab973085163bc5, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  raycastManager: {fileID: 1025764431}
-  camera: {fileID: 1103903734}
-  ground: {fileID: 139292032}
 --- !u!1 &194680792
 GameObject:
   m_ObjectHideFlags: 0
@@ -3049,6 +3056,7 @@ GameObject:
   - component: {fileID: 1025764432}
   - component: {fileID: 1025764434}
   - component: {fileID: 1025764433}
+  - component: {fileID: 1025764435}
   m_Layer: 0
   m_Name: XR Origin
   m_TagString: Untagged
@@ -3157,6 +3165,19 @@ MonoBehaviour:
       m_Calls: []
   m_PlanePrefab: {fileID: 0}
   m_DetectionMode: -1
+--- !u!114 &1025764435
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1025764428}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 9986f830c994b4c4cb0a1e3b7516f527, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  ground: {fileID: 176689190}
 --- !u!1 &1055534607
 GameObject:
   m_ObjectHideFlags: 0
@@ -40700,7 +40721,6 @@ GameObject:
   - component: {fileID: 3220466745683906401}
   - component: {fileID: 3220466745683906431}
   - component: {fileID: 3220466745683906400}
-  - component: {fileID: 3220466745683906432}
   m_Layer: 5
   m_Name: Image
   m_TagString: Untagged
@@ -40716,19 +40736,6 @@ CanvasRenderer:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 3220466745683906402}
   m_CullTransparentMesh: 1
---- !u!114 &3220466745683906432
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220466745683906402}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daa05f77cf10ce45866b507904cd0fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatarIcon: {fileID: 0}
 --- !u!222 &3220466745781677507
 CanvasRenderer:
   m_ObjectHideFlags: 0
