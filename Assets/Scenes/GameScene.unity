@@ -855,6 +855,51 @@ MonoBehaviour:
   m_PixelsPerUnitMultiplier: 1
   borderWidth: 0
   falloffDistance: 1
+--- !u!1 &206061005
+GameObject:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  serializedVersion: 6
+  m_Component:
+  - component: {fileID: 206061006}
+  - component: {fileID: 206061007}
+  m_Layer: 0
+  m_Name: ProfilePicker
+  m_TagString: Untagged
+  m_Icon: {fileID: 0}
+  m_NavMeshLayer: 0
+  m_StaticEditorFlags: 0
+  m_IsActive: 1
+--- !u!4 &206061006
+Transform:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206061005}
+  serializedVersion: 2
+  m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
+  m_LocalPosition: {x: 0, y: 0, z: 0}
+  m_LocalScale: {x: 1, y: 1, z: 1}
+  m_ConstrainProportionsScale: 0
+  m_Children: []
+  m_Father: {fileID: 229120379}
+  m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
+--- !u!114 &206061007
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 206061005}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 4daa05f77cf10ce45866b507904cd0fa, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  avatarIcon: {fileID: 3220466745683906400}
 --- !u!1 &229120378
 GameObject:
   m_ObjectHideFlags: 0
@@ -889,6 +934,7 @@ Transform:
   - {fileID: 1475051268}
   - {fileID: 796748626}
   - {fileID: 771281765}
+  - {fileID: 206061006}
   m_Father: {fileID: 0}
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
 --- !u!114 &229120380
@@ -42335,7 +42381,6 @@ GameObject:
   - component: {fileID: 3220466746339189342}
   - component: {fileID: 3220466746339189343}
   - component: {fileID: 3220466746339189345}
-  - component: {fileID: 3220466746339189344}
   m_Layer: 5
   m_Name: Avatar
   m_TagString: Untagged
@@ -42381,19 +42426,6 @@ MonoBehaviour:
   m_FillOrigin: 0
   m_UseSpriteMesh: 0
   m_PixelsPerUnitMultiplier: 1
---- !u!114 &3220466746339189344
-MonoBehaviour:
-  m_ObjectHideFlags: 0
-  m_CorrespondingSourceObject: {fileID: 0}
-  m_PrefabInstance: {fileID: 0}
-  m_PrefabAsset: {fileID: 0}
-  m_GameObject: {fileID: 3220466746339189313}
-  m_Enabled: 1
-  m_EditorHideFlags: 0
-  m_Script: {fileID: 11500000, guid: 4daa05f77cf10ce45866b507904cd0fa, type: 3}
-  m_Name: 
-  m_EditorClassIdentifier: 
-  avatarIcon: {fileID: 3220466745683906400}
 --- !u!114 &3220466746339189345
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -42438,7 +42470,7 @@ MonoBehaviour:
   m_OnClick:
     m_PersistentCalls:
       m_Calls:
-      - m_Target: {fileID: 3220466746339189344}
+      - m_Target: {fileID: 206061007}
         m_TargetAssemblyTypeName: ProfilePickChange, Assembly-CSharp
         m_MethodName: ReplacePhoto
         m_Mode: 1
