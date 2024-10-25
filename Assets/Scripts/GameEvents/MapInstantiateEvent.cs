@@ -42,7 +42,7 @@ public class MapInstantiateEvent : MonoBehaviour, IPointerDownHandler
         var location = ARCamera.arCamera.transform.position + Vector3.Scale(ARCamera.arCamera.transform.forward, new Vector3(1,0,1)) * 3f;
         var rotation = Quaternion.Euler(0, ARCamera.arCamera.transform.eulerAngles.y - 180, 0);
         Instantiate(eventToSpawn, location, rotation);
-        NavbarController.instance.Navigate(0);
+        NavbarController.instance.Navigate(3);
         Destroy(gameObject);
     }
 }
