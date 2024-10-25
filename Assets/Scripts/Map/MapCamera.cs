@@ -30,7 +30,7 @@ public class MapCamera : MonoBehaviour
 
     public float pitchMin = 10f;  // Limite mínimo de inclinação (para evitar inclinar demais)
     public float pitchMax = 80f;  // Limite máximo de inclinação
-    private bool canTouch;
+    private Dictionary<int,bool> canTouch = new Dictionary<int, bool>();
     private void Awake()
     {
         mapCamera = GetComponent<Camera>();
@@ -62,17 +62,17 @@ public class MapCamera : MonoBehaviour
                 {
                     if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
                     {
-                        canTouch = true;
+                        canTouch[i] =true;
                     }
                     else
                     {
-                        canTouch = false;
+                        canTouch[i] = false;
                     }
                 }
 
                 if (touch.phase == TouchPhase.Moved)
                 {
-                    if (canTouch)
+                    if (canTouch[i])
                     {
                         RotateCamera(touch.deltaPosition);
                     }

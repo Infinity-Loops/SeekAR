@@ -56,7 +56,7 @@ public class ProfilePickChange : MonoBehaviour
         int yOffset = (source.height - newSize) / 2;
 
         // Cria uma nova textura com a área cortada no centro
-        Texture2D croppedTexture = new Texture2D(newSize, newSize);
+        Texture2D croppedTexture = new Texture2D(newSize, newSize, TextureFormat.ARGB32, false);
         Color[] pixels = source.GetPixels(xOffset, yOffset, newSize, newSize);
         croppedTexture.SetPixels(pixels);
         croppedTexture.Apply(false, false);

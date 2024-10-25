@@ -20,6 +20,7 @@ public class NavbarController : MonoBehaviour
     public GameObject dashboardSection;
     public GameObject walletSection;
     public GameObject overlaySection;
+    public static NavbarController instance;
     public void Navigate(int section)
     {
         currentSection = (NavigationSection)section;
@@ -28,6 +29,7 @@ public class NavbarController : MonoBehaviour
 
     private void Awake()
     {
+        instance = this;
         ApplyColors();
     }
 

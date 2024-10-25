@@ -38,10 +38,11 @@ public class MapInstantiateEvent : MonoBehaviour, IPointerDownHandler
 
     void HandleSpawnEvent()
     {
+
         var location = ARCamera.arCamera.transform.position + Vector3.Scale(ARCamera.arCamera.transform.forward, new Vector3(1,0,1)) * 3f;
         var rotation = Quaternion.Euler(0, ARCamera.arCamera.transform.eulerAngles.y - 180, 0);
         Instantiate(eventToSpawn, location, rotation);
-        MapSystem.instance.EnableOrDisableMap();
+        NavbarController.instance.Navigate(0);
         Destroy(gameObject);
     }
 }
