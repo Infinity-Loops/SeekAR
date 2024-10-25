@@ -412,6 +412,8 @@ MonoBehaviour:
   followSmoothness: 0.1
   pitchMin: -40
   pitchMax: 89
+  raycaster: {fileID: 1176402218}
+  targetUIElement: {fileID: 194680792}
 --- !u!114 &28432692
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -799,7 +801,7 @@ RectTransform:
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 0, y: 0}
   m_AnchoredPosition: {x: 589, y: 963.75}
-  m_SizeDelta: {x: 1024, y: 1024}
+  m_SizeDelta: {x: 512, y: 512}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!222 &194680795
 CanvasRenderer:

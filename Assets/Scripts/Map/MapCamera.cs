@@ -5,6 +5,7 @@ using UnityEngine;
 using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
+using UnityEngine.UI;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
 using TouchPhase = UnityEngine.TouchPhase;
 
@@ -25,12 +26,15 @@ public class MapCamera : MonoBehaviour
     private Vector2 prevTouchPos1;
     private Vector2 prevTouchPos2;
 
-    private float currentYaw = 0f; 
-    private float currentPitch = 20f; 
+    private float currentYaw = 0f;
+    private float currentPitch = 20f;
 
     public float pitchMin = 10f;
-    public float pitchMax = 80f; 
-    private Dictionary<int,bool> canTouch = new Dictionary<int, bool>();
+    public float pitchMax = 80f;
+    private Dictionary<int, bool> canTouch = new Dictionary<int, bool>();
+    private PointerEventData pointerEventData;
+    public GraphicRaycaster raycaster;
+    public GameObject targetUIElement;
     private void Awake()
     {
         mapCamera = GetComponent<Camera>();
@@ -38,6 +42,8 @@ public class MapCamera : MonoBehaviour
         {
             EnhancedTouchSupport.Enable();
         }
+
+        pointerEventData = new PointerEventData(EventSystem.current);
     }
 
     void Update()
@@ -49,6 +55,23 @@ public class MapCamera : MonoBehaviour
 
         HandleCameraMove();
     }
+    bool IsTouchOverSpecificUIElement(Vector2 touchPosition)
+    {
+        pointerEventData.position = touchPosition;
+
+        List<RaycastResult> results = new List<RaycastResult>();
+
+        raycaster.Raycast(pointerEventData, results);
+
+        foreach (var result in results)
+        {
+            if (result.gameObject == targetUIElement)
+            {
+                return true;
+            }
+        }
+        return false;
+    }
 
     void HandleTouchMove()
     {
@@ -58,17 +81,17 @@ public class MapCamera : MonoBehaviour
             for (int i = 0; i < Input.touchCount; i++)
             {
                 var touch = Input.GetTouch(i);
+
                 if (touch.phase == TouchPhase.Began)
                 {
-                    if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                    if (!IsTouchOverSpecificUIElement(touch.position))
                     {
-                        canTouch[i] =true;
+                        canTouch[i] = true;
                     }
                     else
                     {
                         canTouch[i] = false;
                     }
-
 
                     Debug.Log($"Touch Count: {Input.touchCount}");
                     Debug.Log($"Touch Phase: {touch.phase}");
