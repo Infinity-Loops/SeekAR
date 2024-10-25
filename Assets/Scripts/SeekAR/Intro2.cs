@@ -17,18 +17,18 @@ public class Intro2 : MonoBehaviour
         foreach (Transform t in objects)
         {
             var cg = t.GetComponent<CanvasGroup>();
-            cg.DOFade(1f, 0.5f);
-            yield return new WaitForSeconds(1f);
+            cg.DOFade(1f, 0.25f);
+            yield return new WaitForSeconds(0.25f);
         }
 
-        yield return new WaitForSeconds(0.5f);
+        yield return new WaitForSeconds(1f);
         stop = true;
 
         rotateCenter.DORotate(Vector3.zero, 1.25f);
 
         foreach (var item in objects)
         {
-            item.DOLocalRotate(Vector3.zero, 0.5f);
+            item.DOLocalRotate(Vector3.zero, 0.15f);
         }
 
         foreach (var item in objects)
@@ -36,7 +36,7 @@ public class Intro2 : MonoBehaviour
             yield return new WaitForSeconds(0.25f);
             (item as RectTransform).DOAnchorPos(logo.anchoredPosition, 0.5f);
             item.DOScale(Vector3.zero, 0.5f);
-            yield return new WaitForSeconds(0.25f);
+            yield return new WaitForSeconds(0.1f);
         }
 
         canvas.DOFade(0f, 0.5f);

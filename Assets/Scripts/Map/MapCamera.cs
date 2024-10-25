@@ -41,6 +41,11 @@ public class MapCamera : MonoBehaviour
 
     void LateUpdate()
     {
+        if (!gameObject.activeInHierarchy)
+        {
+            return;
+        }
+
         HandleCameraMove();
     }
 

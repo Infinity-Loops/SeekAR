@@ -54,7 +54,6 @@ public class MapSystem : MonoBehaviour
     {
         mapActive = true;
         mapCamera.gameObject.SetActive(true);
-        //ARCamera.arCamera.enabled = false;
         mapInterface.SetActive(true);
         HandleMapWelcomeAudio();
     }

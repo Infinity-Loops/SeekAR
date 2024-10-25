@@ -163,12 +163,13 @@
       "url": "https://packages.unity.com"
     },
     "com.unity.inputsystem": {
-      "version": "file:LocalPackages/com.unity.inputsystem",
+      "version": "1.11.2",
       "depth": 0,
-      "source": "local",
+      "source": "registry",
       "dependencies": {
         "com.unity.modules.uielements": "1.0.0"
-      }
+      },
+      "url": "https://packages.unity.com"
     },
     "com.unity.mathematics": {
       "version": "1.3.2",
