@@ -406,7 +406,7 @@ MonoBehaviour:
   map: {fileID: 2055209116}
   target: {fileID: 952113869}
   zoomSpeed: 0.1
-  rotationSpeed: 0.15
+  rotationSpeed: 10
   followDistance: 75
   followHeight: 50
   followSmoothness: 0.1

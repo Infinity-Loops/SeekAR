@@ -115,10 +115,10 @@ public class MapCamera : MonoBehaviour
     void RotateCamera(Vector2 rotationDelta)
     {
         // Ajustar yaw (rotação no eixo Y) com o movimento horizontal do toque
-        currentYaw += rotationDelta.x * rotationSpeed;// * Time.deltaTime;
+        currentYaw += rotationDelta.x * rotationSpeed * Time.deltaTime;
 
         // Ajustar pitch (inclinação no eixo X) com o movimento vertical do toque
-        currentPitch -= rotationDelta.y * rotationSpeed;// * Time.deltaTime;
+        currentPitch -= rotationDelta.y * rotationSpeed * Time.deltaTime;
 
         // Limitar a inclinação da câmera para evitar ângulos estranhos
         currentPitch = Mathf.Clamp(currentPitch, pitchMin, pitchMax);
