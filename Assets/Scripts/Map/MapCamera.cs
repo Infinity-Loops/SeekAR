@@ -25,11 +25,11 @@ public class MapCamera : MonoBehaviour
     private Vector2 prevTouchPos1;
     private Vector2 prevTouchPos2;
 
-    private float currentYaw = 0f;    // Ângulo de rotação em torno do alvo (eixo Y)
-    private float currentPitch = 20f; // Ângulo de rotação para inclinar a câmera (eixo X)
+    private float currentYaw = 0f; 
+    private float currentPitch = 20f; 
 
-    public float pitchMin = 10f;  // Limite mínimo de inclinação (para evitar inclinar demais)
-    public float pitchMax = 80f;  // Limite máximo de inclinação
+    public float pitchMin = 10f;
+    public float pitchMax = 80f; 
     private Dictionary<int,bool> canTouch = new Dictionary<int, bool>();
     private void Awake()
     {
@@ -40,7 +40,7 @@ public class MapCamera : MonoBehaviour
         }
     }
 
-    void LateUpdate()
+    void Update()
     {
         if (!gameObject.activeInHierarchy)
         {
@@ -68,6 +68,12 @@ public class MapCamera : MonoBehaviour
                     {
                         canTouch[i] = false;
                     }
+
+
+                    Debug.Log($"Touch Count: {Input.touchCount}");
+                    Debug.Log($"Touch Phase: {touch.phase}");
+                    Debug.Log($"FingerId: {touch.fingerId}, Can Touch: {canTouch[i]}");
+
                 }
 
                 if (touch.phase == TouchPhase.Moved)
@@ -76,7 +82,13 @@ public class MapCamera : MonoBehaviour
                     {
                         RotateCamera(touch.deltaPosition);
                     }
+
+                    Debug.Log($"Touch Count: {Input.touchCount}");
+                    Debug.Log($"Touch Phase: {touch.phase}");
+                    Debug.Log($"FingerId: {touch.fingerId}, Can Touch: {canTouch[i]}");
+
                 }
+
             }
         }
 

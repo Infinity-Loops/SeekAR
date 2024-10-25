@@ -76,7 +76,7 @@ Material:
     m_Floats:
     - BlurRadius: 0.5
     - FadeTightness: 80
-    - MultiplyStrength: 0.5
+    - MultiplyStrength: 1
     - Vector1_50A95A7B: 0
     - _BumpScale: 1
     - _Cutoff: 0.5
