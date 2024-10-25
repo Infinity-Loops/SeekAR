@@ -22,7 +22,7 @@ public class Ground : MonoBehaviour
 
         hits.Clear();
 
-        if (raycaster.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.Planes) && hits.Count > 0)
+        if (raycaster.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon) && hits.Count > 0)
         {
             Vector3 medianPoint = Vector3.zero;
 

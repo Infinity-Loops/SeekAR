@@ -53,26 +53,29 @@ public class MapCamera : MonoBehaviour
     void HandleTouchMove()
     {
 
-        if (Input.touchCount == 1)
+        if (Input.touchCount > 0)
         {
-            var touch = Input.GetTouch(0);
-            if (touch.phase == TouchPhase.Began)
+            for (int i = 0; i < Input.touchCount; i++)
             {
-                if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                var touch = Input.GetTouch(i);
+                if (touch.phase == TouchPhase.Began)
                 {
-                    canTouch = true;
+                    if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
+                    {
+                        canTouch = true;
+                    }
+                    else
+                    {
+                        canTouch = false;
+                    }
                 }
-                else
-                {
-                    canTouch = false;
-                }
-            }
 
-            if(touch.phase == TouchPhase.Moved)
-            {
-                if (canTouch)
+                if (touch.phase == TouchPhase.Moved)
                 {
-                    RotateCamera(touch.deltaPosition);
+                    if (canTouch)
+                    {
+                        RotateCamera(touch.deltaPosition);
+                    }
                 }
             }
         }

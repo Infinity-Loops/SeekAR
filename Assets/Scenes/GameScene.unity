@@ -42930,6 +42930,7 @@ MonoBehaviour:
   wallet: {fileID: 3871436584153264418}
   ar: {fileID: 723052721}
   map: {fileID: 1532450056}
+  arCamera: {fileID: 1103903739}
   homeSection: {fileID: 4180386058782632480}
   dashboardSection: {fileID: 110887194838998309}
   walletSection: {fileID: 1034285498891411774}

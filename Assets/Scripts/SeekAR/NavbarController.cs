@@ -14,6 +14,7 @@ public class NavbarController : MonoBehaviour
     public Image wallet;
     public Image ar;
     public Image map;
+    public Camera arCamera;
 
     public GameObject homeSection;
     public GameObject dashboardSection;
@@ -46,7 +47,7 @@ public class NavbarController : MonoBehaviour
                 walletSection.SetActive(false);
                 MapSystem.instance.DisableMap();
                 overlaySection.SetActive(true);
-
+                arCamera.enabled = false;
                 break;
             case NavigationSection.Dashboard:
                 home.DOColor(normalColor, 0.5f);
@@ -60,6 +61,7 @@ public class NavbarController : MonoBehaviour
                 walletSection.SetActive(false);
                 MapSystem.instance.DisableMap();
                 overlaySection.SetActive(true);
+                arCamera.enabled = false;
                 break;
             case NavigationSection.Wallet:
                 home.DOColor(normalColor, 0.5f);
@@ -73,6 +75,7 @@ public class NavbarController : MonoBehaviour
                 dashboardSection.SetActive(false);
                 walletSection.SetActive(true);
                 overlaySection.SetActive(true);
+                arCamera.enabled = false;
                 break;
             case NavigationSection.Map:
                 home.DOColor(normalColor, 0.5f);
@@ -86,6 +89,7 @@ public class NavbarController : MonoBehaviour
                 dashboardSection.SetActive(false);
                 walletSection.SetActive(false);
                 overlaySection.SetActive(false);
+                arCamera.enabled = false;
                 break;
             case NavigationSection.AR:
                 home.DOColor(normalColor, 0.5f);
@@ -98,6 +102,7 @@ public class NavbarController : MonoBehaviour
                 walletSection.SetActive(false);
                 overlaySection.SetActive(false);
                 MapSystem.instance.DisableMap();
+                arCamera.enabled = true;
                 break;
         }
     }
