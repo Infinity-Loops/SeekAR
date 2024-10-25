@@ -6,6 +6,7 @@ using UnityEngine.EventSystems;
 using UnityEngine.InputSystem;
 using UnityEngine.InputSystem.EnhancedTouch;
 using Touch = UnityEngine.InputSystem.EnhancedTouch.Touch;
+using TouchPhase = UnityEngine.TouchPhase;
 
 public class MapCamera : MonoBehaviour
 {
@@ -29,7 +30,7 @@ public class MapCamera : MonoBehaviour
 
     public float pitchMin = 10f;  // Limite mínimo de inclinação (para evitar inclinar demais)
     public float pitchMax = 80f;  // Limite máximo de inclinação
-
+    private bool canTouch;
     private void Awake()
     {
         mapCamera = GetComponent<Camera>();
@@ -52,19 +53,30 @@ public class MapCamera : MonoBehaviour
     void HandleTouchMove()
     {
 
-        var activeTouches = Touch.activeTouches;
-
-        if (activeTouches.Count == 1)
+        if (Input.touchCount == 1)
         {
-            var touch = activeTouches[0];
-            if (touch.phase == UnityEngine.InputSystem.TouchPhase.Moved)
+            var touch = Input.GetTouch(0);
+            if (touch.phase == TouchPhase.Began)
             {
-                if (!EventSystem.current.IsPointerOverGameObject(touch.touchId))
+                if (!EventSystem.current.IsPointerOverGameObject(touch.fingerId))
                 {
-                    RotateCamera(touch.delta);
+                    canTouch = true;
+                }
+                else
+                {
+                    canTouch = false;
+                }
+            }
+
+            if(touch.phase == TouchPhase.Moved)
+            {
+                if (canTouch)
+                {
+                    RotateCamera(touch.deltaPosition);
                 }
             }
         }
+
     }
 
     private void HandleCameraMove()
@@ -100,10 +112,10 @@ public class MapCamera : MonoBehaviour
     void RotateCamera(Vector2 rotationDelta)
     {
         // Ajustar yaw (rotação no eixo Y) com o movimento horizontal do toque
-        currentYaw += rotationDelta.x * rotationSpeed * Time.deltaTime;
+        currentYaw += rotationDelta.x * rotationSpeed;// * Time.deltaTime;
 
         // Ajustar pitch (inclinação no eixo X) com o movimento vertical do toque
-        currentPitch -= rotationDelta.y * rotationSpeed * Time.deltaTime;
+        currentPitch -= rotationDelta.y * rotationSpeed;// * Time.deltaTime;
 
         // Limitar a inclinação da câmera para evitar ângulos estranhos
         currentPitch = Mathf.Clamp(currentPitch, pitchMin, pitchMax);

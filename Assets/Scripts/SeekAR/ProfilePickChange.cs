@@ -36,9 +36,7 @@ public class ProfilePickChange : MonoBehaviour
                 else
                 {
                     Texture2D imageParsed = NativeGallery.LoadImageAtPath(path);
-                    Texture2D cutTex = CutTextureToSquare(imageParsed, 512);
-                    Texture2D circleTex = ApplyCircleMask(imageParsed);
-                    DataSystem.avatar = Sprite.Create(circleTex, new Rect(Vector2.zero, new Vector2(imageParsed.width, imageParsed.height)), new Vector2(0.5f, 0.5f));
+                    DataSystem.avatar = Sprite.Create(imageParsed, new Rect(Vector2.zero, new Vector2(imageParsed.width, imageParsed.height)), new Vector2(0.5f, 0.5f));
                     avatarIcon.sprite = DataSystem.avatar;
 
                     DataSystem.SaveAvatarPhoto();
