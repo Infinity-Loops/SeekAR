@@ -11,6 +11,7 @@ public class NFT : MonoBehaviour, IPointerDownHandler
     public List<GameObject> nfts = new List<GameObject>();
     public GameObject particle;
     public Transform instancePole;
+    private bool isOpen;
     public void OnOpen()
     {
         var randomNFT = nfts[Random.Range(0, nfts.Count)];
@@ -19,7 +20,11 @@ public class NFT : MonoBehaviour, IPointerDownHandler
         instancePole.transform.localScale = Vector3.zero;
         Instantiate(particle, instancePole.position, Quaternion.identity);
         instancePole.DOScale(Vector3.one, 1f);
-        instancePole.DOLocalMoveY(0.8f, 1f);
+        instancePole.DOLocalMoveY(0.8f, 1f).OnComplete(() =>
+        {
+            isOpen = true;
+        });
+
     }
 
     public void OnPointerDown(PointerEventData eventData)
@@ -28,6 +33,11 @@ public class NFT : MonoBehaviour, IPointerDownHandler
         {
             sequenceStarted = true;
             animator.Play("Open");
+        }
+        else if (isOpen)
+        {
+            CollectionNotificationHandler.instance.HandleNotificationSequence(null, null, 1, "SEEKARNFT", "NFT");
+            Destroy(gameObject);
         }
     }
 }
