@@ -17,14 +17,8 @@ public class NFT : MonoBehaviour, IPointerDownHandler
         var randomNFT = nfts[Random.Range(0, nfts.Count)];
 
         var instantedNFT = Instantiate(randomNFT, instancePole);
-        instancePole.transform.localScale = Vector3.zero;
         Instantiate(particle, instancePole.position, Quaternion.identity);
-        instancePole.DOScale(Vector3.one, 1f);
-        instancePole.DOLocalMoveY(0.8f, 1f).OnComplete(() =>
-        {
-            isOpen = true;
-        });
-
+        isOpen = true;
     }
 
     public void OnPointerDown(PointerEventData eventData)
