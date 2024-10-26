@@ -72,7 +72,7 @@ public class CoinMapInstantiateEvent : MonoBehaviour, IPointerDownHandler
         var coinSelector = coin.GetComponent<CollectableCoinSelector>();
         coinSelector.dontChooseCoin = true;
         coinSelector.coinToChoose = currentCoin.name;
-        MapSystem.instance.EnableOrDisableMap();
+        NavbarController.instance.Navigate(3);
         Destroy(gameObject);
     }
 }
