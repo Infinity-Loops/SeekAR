@@ -24,18 +24,8 @@ public class Ground : MonoBehaviour
 
         if (raycaster.Raycast(screenCenter, hits, UnityEngine.XR.ARSubsystems.TrackableType.PlaneWithinPolygon) && hits.Count > 0)
         {
-            Vector3 medianPoint = Vector3.zero;
-            int hitPoints = 0;
-
-            foreach (var hit in hits)
-            {
-                medianPoint += hit.pose.position;
-            }
-
-            hitPoints += hits.Count;
-
-            Vector3 midPont = medianPoint / hitPoints;
-            ground.position = midPont;
+            Vector3 hitPose = hits[0].pose.position;
+            ground.position = hitPose;
         }
     }
 }
